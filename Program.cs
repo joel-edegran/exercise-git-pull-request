@@ -12,6 +12,11 @@
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
                     var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
+                    static void ThisWasATriumph()
+                    {
+                        Console.WriteLine("I'm making a note here");
+                        Console.WriteLine("Huge Success");
+                    } 
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
