@@ -11,7 +11,7 @@
                 try
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
-                    var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
+                    var path = Path.GetFullPath("numbers.txt");
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
