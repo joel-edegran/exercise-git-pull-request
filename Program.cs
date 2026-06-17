@@ -1,4 +1,6 @@
-﻿namespace ExceptionsDemo
+﻿using System.Configuration.Assemblies;
+
+namespace ExceptionsDemo
 {
     internal class Program
     {
@@ -10,7 +12,12 @@
             try
             {
                 Console.WriteLine("Försöker läsa fil och räkna...");
-                var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
+                Console.WriteLine("Can I force a conflict?");
+                static void AFunction()
+                {
+                    Console.WriteLine("Hello");
+                } 
+                var path = Path.Join(AppContext.BaseDirectory, "numbers.txt");
                 var result = ProcessFile(path);
 
                 Console.WriteLine($"\nResultat: {result}");
